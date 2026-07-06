@@ -2,7 +2,7 @@
 
 An embedded systems project featuring a custom-built alarm system controlled via an IR remote and an attached matrix keypad for user configuration, security access, and state management.
 
-## 📝 Project Description
+## Project Description
 This project implements an intelligent home/space security alarm system using an Arduino board. The system monitors access points and triggers visual and acoustic alerts if an unauthorized entry or action is detected. Users can arm, disarm, and configure the alarm dynamically using multiple input interfaces.
 
 ### Core Features:
@@ -14,11 +14,11 @@ This project implements an intelligent home/space security alarm system using an
 
 ---
 
-## 🕹️ Control & Interface (How it works)
+## Control & Interface (How it works)
 
 The system is interactively controlled via the 4x4 Matrix Keypad for administration tasks and user authentication[cite: 7]. Below is the accurate mapping of the system's functional keys based on the current firmware logic[cite: 7]:
 
-### ⌨️ Keypad Mapping
+### Keypad Mapping
 
 | Key | Action Triggered | Function Description |
 | :---: | :--- | :--- |
@@ -30,7 +30,7 @@ The system is interactively controlled via the 4x4 Matrix Keypad for administrat
 
 ---
 
-### 📺 IR Remote Mapping
+### IR Remote Mapping
 
 The system utilizes specific directional arrows on the IR Remote for quick wireless arming and disarming actions:
 
@@ -39,13 +39,13 @@ The system utilizes specific directional arrows on the IR Remote for quick wirel
 
 ---
 
-### 🔄 State Switching & Authentication Logic
+### State Switching & Authentication Logic
 - **Arming/Disarming:** When you type a sequence of 4 digits, the system automatically checks them against the saved password[cite: 7]. If correct, it toggles between **Armed** (locks the mechanism via the servo, turns on the red LED) and **Disarmed** (opens the lock via the servo, turns on the green LED)[cite: 7].
 - **Configuration Security:** Pressing any utility key (`#`, `A`, `B`, `C`) will not instantly open a menu[cite: 7]. The system will prompt `Type password` first, ensuring that only authorized users can modify the alarm parameters[cite: 7].
 
 ---
 
-## 🔌 Dependencies & Libraries
+## Dependencies & Libraries
 To compile and upload this project, you need to install the following libraries within your Arduino IDE (`Sketch` -> `Include Library` -> `Manage Libraries...`):
 
 * **Keypad v3.1.1** by Mark Stanley, Alexander Brevig
@@ -55,7 +55,7 @@ To compile and upload this project, you need to install the following libraries 
 
 ---
 
-## 🚀 How to Set Up and Run
+## How to Set Up and Run
 
 ### 1. Hardware Connection
 Connect your components to the Arduino pins as defined in the source code:
@@ -71,6 +71,6 @@ Connect your components to the Arduino pins as defined in the source code:
 4. Select your correct Arduino Board (e.g., Arduino Mega or Mega 2560) and Serial Port under the `Tools` menu.
 5. Click **Verify** to compile the code, then click **Upload** to flash it onto your board.
 
-## 🎬 Demo on how it works
+## Demo on how it works
 
 A video demonstration of how the alarm system works is available on [YouTube](https://www.youtube.com/watch?v=ySTaATLWpZw&t=10s).
